@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/data5/a23218/DEV_ss_pr/extension/streamer/generic-source-element/dlna'
+let g:netrw_dirhist_2='/data5/a23218/HEDERA_work/platform/interface/toi/generic_idl'
+let g:netrw_dirhist_3='/data5/a23218/KREATV-17293_2/extension/streamer/lib-format-handler/elementary/mp3'
+let g:netrw_dirhist_4='/data5/a23218/KREATV-17293_2/extension/streamer/basic-source-element'
+let g:netrw_dirhist_5='/data5/a23218/KREATV-17293_2/extension/streamer/lib-format-handler/mp4/unittests'
+let g:netrw_dirhist_6='/data5/a23218/HEDERA_work/makesystem/unittests'
+let g:netrw_dirhist_7='/data5/a23218/HEDERA_work/makesystem/unittests/createmock'

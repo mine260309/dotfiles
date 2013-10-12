@@ -1,0 +1,18 @@
+#!/bin/sh
+case $1 in
+     ?)     cat ~/bin/jump;;
+#     1|build)    cd /vobs/mbm/odm/build;;
+#     2|mbm)      cd /vobs/mbm;;
+      1|base)     cd /home/a23218/IPTV/branches/trunk;;
+      2|eit)      cd /home/a23218/IPTV/branches/trunk/platform/eitcache;;
+      3|idl)      cd /home/a23218/IPTV/branches/trunk/platform/interface/toi/idl;;
+      4|html)     cd /var/www/html/;;
+      5|ic)       cd /opt/infocast/;;
+      6|nfs)      cd /extra/a23218/nfs;;
+      7|tftp)     cd /var/lib/tftpboot/a23218/;;
+     *)          echo No Match. Possible Directory;echo; grep $1 ~/bin/jump;echo;;
+esac
+        
+        
+        
+        
