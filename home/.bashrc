@@ -3,12 +3,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-PATH=$PATH:/home/a23218/bin/scripts:/home/a23218/IPTV/webkit/WebKitTools/Scripts:/home/a23218/apps/android-sdk-linux/tools:/home/a23218/apps/android-sdk-linux/platform-tools/:/home/a23218/apps/rar:/home/a23218/MineWork/google/depot_tools:/home/a23218/apps/firefox/:/home/a23218/apps:~/bin/devtools/bin:/home/a23218/apps/google_appengine:/home/a23218/tools/google_appengine:/home/a23218/bin/zaplogparser/
-export PATH
-export ANDROID_NDK_ROOT=/home/a23218/apps/android-ndk/
-export GYP_GENERATORS=make
-#export LC_CTYPE="zh_CN"
-#export XMODIFIERS="@im=fcitx"
 #===============================================================
 #
 # PERSONAL $HOME/.bashrc FILE for bash-2.05a (or later)
@@ -32,16 +26,6 @@ export GYP_GENERATORS=make
 
 # --> Comments added by HOWTO author.
 # --> And then edited again by ER :-)
-
-#-----------------------------------
-# Source global definitions (if any)
-#-----------------------------------
-
-#
-#if [ -f /etc/bashrc ]; then
-#
-#. /etc/bashrc   # --> Read /etc/bashrc, if present.
-#fi
 
 #-------------------------------------------------------------
 # Automatic setting of $DISPLAY (if not set already)
@@ -259,8 +243,6 @@ alias bc='java -jar ~/apps/bootchart.jar '
 typeset -x EDITOR=vi
 typeset -x WINEDITOR=vi
 ## My Alias end
-#export CLEARCASE_AVOBS='/vobs/mbm /vobs/engine_boot /vobs/motopro_flash /vobs/motopro_bsp /vobs/engine_hapi /vobs/engine_qspi /vobs/engine_pupd /vobs/atso_tools /vobs/3g /vobs/platform2000 /vobs/synergy_uis /vobs/jem/os /vobs/jem/os_release /vobs/jem/hardhat /vobs/jem/caf / vobs/ezx_linux /vobs/ezx_platform /vobs/suapi_release /vobs/synergy_device_layer /vobs/engine_seem /vobs/tsg_emmi /vobs/synergy_afw /vobs/synergy_uis /vobs/synergy_apps_util /vobs/synergy_adk /vobs/synergy_device_layer /vobs/synergy_hdk /vobs/synergy_usnet /vobs/synergy_browser /vobs/synergy_core_apps /vobs/bt /vobs/conn /vobs/atso_process /vobs/synergy_main /vobs/cdma_engine_release /vobs/gsm_engine_release /vobs/conn_release /vobs/suapi_release'
-export CLEARCASE_AVOBS='/vobs/engine_qcom_wcdma /vobs/atso_tools /vobs/engine_boot /vobs/mbm /vobs/pcs_fs_tools'
 
 alias h='history'
 alias j='jobs -l'
@@ -269,8 +251,6 @@ alias which='type -all'
 alias ..='cd ..'
 alias path='echo -e ${PATH//:/\\n}'
 alias print='/usr/bin/lp -o nobanner -d $LPDEST'   # Assumes LPDEST is defined
-alias pjet='enscript -h -G -fCourier9 -d $LPDEST'  # Pretty-print using enscript
-alias background='xv -root -quit -max -rmode 5'    # Put a picture in the background
 alias du='du -kh'
 alias df='df -kTh'
 
@@ -296,10 +276,6 @@ export LESSCHARSET='latin1'
 export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-' # Use this if lesspipe.sh exists
 export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
-
-#export LM_LICENSE_FILE=/vobs/engine_boot/build/make/include/arm_license.dat
-#export LM_LICENSE_FILE=27000@zch45bd1
-#export LM_LICENSE_FILE=/usr/vendor/arm-1.1/licenses/license.dat:27000@lion2.pcs.mot.com:7571@lion2.pcs.mot.com:8224@ladybug1:8224@ladybug2:8224@beetle3:3700@beetle1:3700@beetle2:3700@beetle3:27000@beetle1:8224@beetle1:27000@beetle2:8224@beetle2:27000@ladybug1:27000@ladybug2:19353@sa-b:19353@swim-b:19353@sail-a:/usr/global/diab/license.dat:27000@lion2.pcs.mot.com:27000@200.124.50.35:27000@10.22.48.50:27000@zch45bd1:/home1/qdf876/license.armv2
 
 # spelling typos - highly personnal :-)
 alias xs='cd'
@@ -608,26 +584,6 @@ _make_targets ()
 
 complete -F _make_targets -X '+($*|*.[cho])' make gmake pmake
 
-
-# cvs(1) completion
-_cvs ()
-{
-    local cur prev
-    COMPREPLY=()
-    cur=${COMP_WORDS[COMP_CWORD]}
-    prev=${COMP_WORDS[COMP_CWORD-1]}
-
-    if [ $COMP_CWORD -eq 1 ] || [ "${prev:0:1}" = "-" ]; then
-        COMPREPLY=( $( compgen -W 'add admin checkout commit diff \
-        export history import log rdiff release remove rtag status \
-        tag update' $cur ))
-    else
-        COMPREPLY=( $( compgen -f $cur ))
-    fi
-    return 0
-}
-complete -F _cvs cvs
-
 _killall ()
 {
     local cur prev
@@ -706,5 +662,10 @@ complete -o default -F _my_command command type which man nice
 # End:
 
 #declare -x LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35: bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31: *.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31: *.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31: *.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35: *.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35: *.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35: *.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35: *.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35: *.wav=01;35:"
+
+PATH=$PATH:/home/a23218/bin/scripts:/home/a23218/IPTV/webkit/WebKitTools/Scripts:/home/a23218/apps/android-sdk-linux/tools:/home/a23218/apps/android-sdk-linux/platform-tools/:/home/a23218/apps/rar:/home/a23218/MineWork/google/depot_tools:/home/a23218/apps/firefox/:/home/a23218/apps:~/bin/devtools/bin:/home/a23218/apps/google_appengine:/home/a23218/tools/google_appengine:/home/a23218/bin/zaplogparser/
+export PATH
+export ANDROID_NDK_ROOT=/home/a23218/apps/android-ndk/
+export GYP_GENERATORS=make
 
 alias homeshick="source $HOME/.homesick/repos/homeshick/bin/homeshick.sh"
