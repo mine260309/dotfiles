@@ -1,11 +1,37 @@
 set nu
 set ts=2
 colorscheme desert
-set expandtab
-set shiftwidth=2
+"set expandtab
+"set shiftwidth=2
 set smartindent
 
 nnoremap <silent> <F8> :TlistToggle<CR>
+
+" highlight trailing whitespace in c++
+au BufNewFile,BufRead *.cpp,*.c,*.h call Cpp_stuff()
+function Cpp_stuff()
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+endfunction
+
+" highlight the 80'th column
+highlight ColorColumn ctermbg=darkgrey
+set colorcolumn=80
+
+" tab size is 2
+set sw=2
+" expanding tabs
+set expandtab
+" enables C indentation
+set cino=:0,l1,g0,t0,(0,u0
+" enables more smooth handling of gcc errors
+compiler gcc
+" highlight trailing spaces
+let c_space_errors=1
 
 "vundle config"
 set nocompatible               " be iMproved

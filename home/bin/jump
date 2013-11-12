@@ -8,8 +8,8 @@ case $1 in
       3|idl)      cd /home/a23218/IPTV/branches/trunk/platform/interface/toi/idl;;
       4|html)     cd /var/www/html/;;
       5|ic)       cd /opt/infocast/;;
-      6|nfs)      cd /extra/a23218/nfs;;
-      7|tftp)     cd /var/lib/tftpboot/a23218/;;
+      6|nfs)      cd /home/a23218/nfs;;
+      7|tftp)     cd /var/lib/tftpboot/;;
      *)          echo No Match. Possible Directory;echo; grep $1 ~/bin/jump;echo;;
 esac
         
