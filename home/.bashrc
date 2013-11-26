@@ -668,4 +668,4 @@ export PATH
 export ANDROID_NDK_ROOT=/home/a23218/apps/android-ndk/
 export GYP_GENERATORS=make
 
-alias homeshick="source $HOME/.homesick/repos/homeshick/bin/homeshick.sh"
+source $HOME/.homesick/repos/homeshick/homeshick.sh
