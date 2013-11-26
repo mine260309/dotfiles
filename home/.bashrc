@@ -668,6 +668,20 @@ export PATH
 export ANDROID_NDK_ROOT=/home/a23218/apps/android-ndk/
 export GYP_GENERATORS=make
 
+alias startproxy='~/apps/wallproxy-plus/local/startup.py'
+export ANDROID_JAVA_HOME=$JAVA_HOME
+export PATH=$PATH:/home/mine/android_tools/android-ndk/:/home/mine/android_tools/android-sdk/tools:/home/mine/bin:/extra/tools/google_appengine:/home/mine/android_tools/android-sdk/platform-tools
+export PATH=$PATH:/home/mine/apps/google_appengine
+export SVN_EDITOR=vim
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
