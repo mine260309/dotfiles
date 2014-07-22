@@ -1,7 +1,6 @@
 set nu
 set ts=2
 colorscheme desert
-"set expandtab
 "set shiftwidth=2
 set smartindent
 
@@ -47,19 +46,22 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+"Bundle 'git://git.wincent.com/command-t.git'
 
 Bundle 'scrooloose/nerdtree'
-Bundle 'taglist.vim'
+"Bundle 'taglist.vim'
 Bundle 'nerdtree-ack'
+"Bundle 'ervandew/supertab'
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'chazy/cscope_maps'
 
 filetype plugin indent on     " required!
 "
@@ -74,7 +76,10 @@ filetype plugin indent on     " required!
 
 " NERDTree config
 map <F7> :NERDTreeToggle<CR>
-map <F4> :tabnew<CR>
-map <F6> :tabn<CR>
-map <F5> :tabp<CR>
 
+map <F9> :!make local_all -j<CR>
+
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+"let Cscope_JumpError = 0
+"let Cscope_PopupMenu = 1
+autocmd FileType qf wincmd H
