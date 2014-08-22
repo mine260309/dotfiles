@@ -1,8 +1,8 @@
 [user]
 	name = Lei YU
 	email = mine260309@gmail.com
-[diff]
-  external = git-meld.sh
+#[diff]
+#  external = git-meld.sh
 [github]
 	user = mine260309
 	token = --hidden--

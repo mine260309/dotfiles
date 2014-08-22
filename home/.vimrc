@@ -3,6 +3,7 @@ set ts=2
 colorscheme desert
 "set shiftwidth=2
 set smartindent
+set hlsearch
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 
@@ -76,10 +77,12 @@ filetype plugin indent on     " required!
 
 " NERDTree config
 map <F7> :NERDTreeToggle<CR>
-
 map <F9> :!make local_all -j<CR>
+map <F12> :set filetype=kreatvlog<CR>
 
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let Cscope_JumpError = 0
 "let Cscope_PopupMenu = 1
 autocmd FileType qf wincmd H
+
+
