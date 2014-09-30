@@ -8,15 +8,15 @@ set hlsearch
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 " highlight trailing whitespace in c++
-au BufNewFile,BufRead *.cpp,*.c,*.h call Cpp_stuff()
-function Cpp_stuff()
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-endfunction
+"au BufNewFile,BufRead *.cpp,*.c,*.h call Cpp_stuff()
+"function Cpp_stuff()
+"highlight ExtraWhitespace ctermbg=red guibg=red
+"match ExtraWhitespace /\s\+$/
+"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+"autocmd BufWinLeave * call clearmatches()
+"endfunction
 
 " highlight the 80'th column
 highlight ColorColumn ctermbg=darkgrey
@@ -63,6 +63,7 @@ Plugin 'nerdtree-ack'
 "Plugin 'ervandew/supertab'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'chazy/cscope_maps'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
