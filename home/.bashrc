@@ -167,9 +167,9 @@ function powerprompt()
 
 ##### Setup prompt.
 #${NORM}${REV}$BOLD$HOSTNAME$BOLD$MYNODE:${NORM}${REV}${CLEARCASE_ROOT:+$CLEARCASE_ROOT}$NORM\w> 
-export BOLD=`tput bold`
-export REV=`tput smso`
-export NORM=`tput sgr0`
+export BOLD=`tty -s && tput bold`
+export REV=`tty -s && tput smso`
+export NORM=`tty -s && tput sgr0`
 
 USERNAME=`whoami`
 
@@ -667,6 +667,7 @@ PATH=$PATH:/home/a23218/bin/scripts:/home/a23218/IPTV/webkit/WebKitTools/Scripts
 
 # Android SDK and NDK path
 PATH=$PATH:~/android/adt-bundle/sdk/tools:~/android/adt-bundle/sdk/platform-tools:~/android/android-ndk:~/android/android-studio/bin
+export ANDROID_HOME=~/android/adt-bundle/sdk/
 
 export PATH
 export ANDROID_NDK_ROOT=/home/a23218/apps/android-ndk/
