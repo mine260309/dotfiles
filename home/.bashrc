@@ -117,7 +117,7 @@ fi
 
 function _exit()	# function to run upon exit of shell
 {
-    echo -e "${RED}Exit Bash. Bye-bye!!!${NC}"
+    tty -s && echo -e "${RED}Exit Bash. Bye-bye!!!${NC}"
 }
 trap _exit EXIT
 
