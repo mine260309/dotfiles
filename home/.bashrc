@@ -298,9 +298,9 @@ function xtitle ()
 }
 
 # aliases...
-alias top='xtitle Processes on $HOST && top'
-alias make='xtitle Making $(basename $PWD) ; make'
-alias ncftp="xtitle ncFTP ; ncftp"
+#alias top='xtitle Processes on $HOST && top'
+#alias make='xtitle Making $(basename $PWD) ; make'
+#alias ncftp="xtitle ncFTP ; ncftp"
 
 # .. and functions
 
@@ -665,6 +665,9 @@ complete -o default -F _my_command command type which man nice
 # PATH of a23218
 PATH=$PATH:/home/a23218/bin/scripts:/home/a23218/IPTV/webkit/WebKitTools/Scripts:/home/a23218/apps/rar:/home/a23218/MineWork/google/depot_tools:/home/a23218/apps/firefox/:/home/a23218/apps:~/bin/devtools/bin:/home/a23218/apps/google_appengine:/home/a23218/tools/google_appengine:/home/a23218/bin/zaplogparser/:/home/a23218/bin
 
+# PATH on build server
+PATH=$PATH:/extra/a23218-2/bin
+
 # Android SDK and NDK path
 PATH=$PATH:~/android/adt-bundle/sdk/tools:~/android/adt-bundle/sdk/platform-tools:~/android/android-ndk:~/android/android-studio/bin
 export ANDROID_HOME=~/android/adt-bundle/sdk/
@@ -679,6 +682,8 @@ export ANDROID_JAVA_HOME=$JAVA_HOME
 export PATH=$PATH:/home/mine/android_tools/android-ndk/:/home/mine/android_tools/android-sdk/tools:/home/mine/bin:/extra/tools/google_appengine:/home/mine/android_tools/android-sdk/platform-tools
 export PATH=$PATH:/home/mine/apps/google_appengine
 export SVN_EDITOR=vim
+
+export CCACHE_DIR=/extra/ccache
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

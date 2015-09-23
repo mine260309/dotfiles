@@ -64,6 +64,7 @@ Plugin 'nerdtree-ack'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'chazy/cscope_maps'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -90,4 +91,4 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let Cscope_PopupMenu = 1
 autocmd FileType qf wincmd H
 
-
+let g:ctrlp_working_path_mode = 'a'
