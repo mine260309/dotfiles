@@ -235,7 +235,7 @@ alias sv="ct setview"
 alias jmp=". jump"
 alias e="madedit "
 alias fn="find . -name"
-alias wlc="/home/a23218/apps/wxlogclient/wxlogclient.py&"
+alias wlc="~/apps/wxlogclient/wxlogclient.py&"
 alias vncserver='vncserver -geometry 1280x780'
 #alias bc='java -jar ~/apps/bootchart.jar '
 
@@ -663,7 +663,7 @@ complete -o default -F _my_command command type which man nice
 #declare -x LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35: bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31: *.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31: *.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31: *.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35: *.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35: *.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35: *.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35: *.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35: *.wav=01;35:"
 
 # PATH of a23218
-PATH=$PATH:/home/a23218/bin/scripts:/home/a23218/IPTV/webkit/WebKitTools/Scripts:/home/a23218/apps/rar:/home/a23218/MineWork/google/depot_tools:/home/a23218/apps/firefox/:/home/a23218/apps:~/bin/devtools/bin:/home/a23218/apps/google_appengine:/home/a23218/tools/google_appengine:/home/a23218/bin/zaplogparser/:/home/a23218/bin
+PATH=$PATH:~/bin/scripts:~/IPTV/webkit/WebKitTools/Scripts:~/apps/rar:~/MineWork/google/depot_tools:~/apps/firefox/:~/apps:~/bin/devtools/bin:~/apps/google_appengine:~/tools/google_appengine:~/bin/zaplogparser/:~/bin
 
 # PATH on build server
 PATH=$PATH:/extra/a23218-2/bin
@@ -673,7 +673,7 @@ PATH=$PATH:~/android/adt-bundle/sdk/tools:~/android/adt-bundle/sdk/platform-tool
 export ANDROID_HOME=~/android/adt-bundle/sdk/
 
 export PATH
-export ANDROID_NDK_ROOT=/home/a23218/apps/android-ndk/
+export ANDROID_NDK_ROOT=~/apps/android-ndk/
 export GYP_GENERATORS=make
 
 # PATH of mine
