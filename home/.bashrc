@@ -271,7 +271,7 @@ alias df='df -kTh'
 # tailoring 'less'
 alias more='less'
 export PAGER=less
-export LESSCHARSET='latin1'
+export LESSCHARSET='UTF-8'
 export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-' # Use this if lesspipe.sh exists
 export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
@@ -695,6 +695,16 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# refresh profile on USR1 signal
+trap 'source ~/.bashrc' USR1
+
+# send USR1 signal to all bash instances
+reload() {
+  ps -xo pid,command | grep '[0-9] bash' | awk '{print $1}' | while read pid; do
+    echo To send USR1 to $pid
+    kill -USR1 $pid
+  done
+}
 
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
