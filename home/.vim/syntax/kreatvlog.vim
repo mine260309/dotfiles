@@ -23,7 +23,7 @@ syn match   KreaTVWarning       '^.*([0-9]*) Warning\:.*$'
 
 hi def link KreaTVTrace       Normal
 hi def link KreaTVWarning     Constant
-hi def link KreaTVError       Operator
+hi def link KreaTVError       Error
 hi def link KreaTVFatal       ErrorMsg
 hi def link KreaTVNote        Comment
 hi def link KreaTVIP          Constant
