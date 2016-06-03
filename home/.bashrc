@@ -711,5 +711,9 @@ source $HOME/.homesick/repos/homeshick/homeshick.sh
 source "$HOME/.git-completion.bash"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-source ~/.rvm/scripts/rvm
+
+include ~/.rvm/scripts/rvm
