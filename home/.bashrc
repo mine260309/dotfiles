@@ -685,6 +685,9 @@ export SVN_EDITOR=vim
 
 export CCACHE_DIR=/extra/ccache
 
+## My alias
+alias catc='pygmentize -O style=monokai -f console256 -g'
+
 # Cheat configs
 export CHEATCOLORS=true
 

@@ -1,4 +1,5 @@
-set nu
+set number
+set relativenumber
 set ts=2
 colorscheme desert
 "set shiftwidth=2
