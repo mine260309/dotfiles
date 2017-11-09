@@ -1,8 +1,8 @@
 set number
 set relativenumber
-set ts=4
+set ts=8
+set shiftwidth=8
 colorscheme desert
-"set shiftwidth=2
 set smartindent
 set hlsearch
 set backspace=indent,eol,start
@@ -12,9 +12,9 @@ highlight ColorColumn ctermbg=darkgrey
 set colorcolumn=80
 
 "" tab size is 2
-set sw=4
+" set sw=4
 "" expanding tabs
-set expandtab
+" set expandtab
 "" enables C indentation
 "set cino=:0,l1,g0,t0,(0,u0
 "" enables more smooth handling of gcc errors
