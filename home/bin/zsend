@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#DEV=/dev/ttyS0
+DEV=$1
+
+stty -F $DEV 115200
+#sz $1 > $DEV < $DEV
+sz $2 > $DEV < $DEV
