@@ -34,6 +34,8 @@ compiler gcc
 " highlight trailing spaces
 let c_space_errors=1
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 "vundle config"
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -66,6 +68,7 @@ Plugin 'nerdtree-ack'
 Plugin 'chazy/cscope_maps'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'kien/ctrlp.vim'
+Plugin 'maciakl/vim-neatstatus'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
