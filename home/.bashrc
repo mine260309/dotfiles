@@ -720,7 +720,7 @@ include () {
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ## Bitbake
-export PATH=~/MineWork/bitbake/bin:$PATH
+export PATH=~/MineWork/bitbake/bin:~/local/bin:$PATH
 export PYTHONPATH=~/MineWork/bitbake/lib:$PYTHONPATH
 
 include ~/.rvm/scripts/rvm
