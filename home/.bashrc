@@ -687,6 +687,7 @@ export CCACHE_DIR=/extra/ccache
 
 ## My alias
 alias catc='pygmentize -O style=monokai -f console256 -g'
+alias python=python3
 
 # Cheat configs
 export CHEATCOLORS=true
@@ -720,7 +721,7 @@ include () {
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ## Bitbake
-export PATH=~/MineWork/bitbake/bin:~/local/bin:$PATH
-export PYTHONPATH=~/MineWork/bitbake/lib:$PYTHONPATH
+#export PATH=~/MineWork/bitbake/bin:~/local/bin:$PATH
+#export PYTHONPATH=~/MineWork/bitbake/lib:$PYTHONPATH
 
 include ~/.rvm/scripts/rvm
