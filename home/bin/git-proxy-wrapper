@@ -17,4 +17,5 @@
 ## Use connect-proxy as git proxy wrapper which supports SOCKS5
 ## Install with `apt-get install connect-proxy`
 ## And use with `export GIT_PROXY_COMMAND=~/bin/git-proxy-wrapper`
-connect -S 192.168.1.110:1081 "$@"
+#connect -S 192.168.1.110:1081 "$@"
+connect -S 127.0.0.1:9054 "$@"
