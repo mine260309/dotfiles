@@ -8,30 +8,25 @@
 	user = mine260309
 	token = --hidden--
 [color]
-	ui = auto
+	ui = true
 [diff]
 	tool = meld
 [alias]
   log1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) %G? - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
   log2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %G? - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
-  diffc = "!git diff --color $@ | diff-so-fancy"
-  showc = "!git show --color $@ | diff-so-fancy"
+  diffc = !sh -c 'git diff --color $@ | diff-so-fancy' -
+  showc = !sh -c 'git show --color $@ | diff-so-fancy' -
   meld = "!~/bin/git-meld.pl"
 [pager]
   #diff = diff-so-fancy | less --tabs=1,5 -RFX
 	#show = diff-so-fancy | less --tabs=1,5 -RFX
 [color "diff"]
-  meta = yellow bold
-  commit = green bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
+	meta = yellow
+	commit = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 [color "branch"]
   current = yellow reverse
   local = yellow
