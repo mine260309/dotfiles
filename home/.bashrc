@@ -681,6 +681,7 @@ alias startproxy='~/apps/wallproxy-plus/local/startup.py'
 export ANDROID_JAVA_HOME=$JAVA_HOME
 export PATH=$PATH:/home/mine/android_tools/android-ndk/:/home/mine/android_tools/android-sdk/tools:/home/mine/bin:/extra/tools/google_appengine:/home/mine/android_tools/android-sdk/platform-tools
 export PATH=$PATH:/home/mine/apps/google_appengine
+export PATH=$HOME/local/bin:$PATH
 export SVN_EDITOR=vim
 
 export CCACHE_DIR=/extra/ccache
@@ -725,3 +726,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PYTHONPATH=~/MineWork/bitbake/lib:$PYTHONPATH
 
 include ~/.rvm/scripts/rvm
+alias gg="git grep"
+alias v="vim"
+alias vi="vim"
