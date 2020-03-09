@@ -688,7 +688,7 @@ export CCACHE_DIR=/extra/ccache
 
 ## My alias
 alias catc='pygmentize -O style=monokai -f console256 -g'
-alias python=python3
+#alias python=python3
 
 # Cheat configs
 export CHEATCOLORS=true
@@ -729,3 +729,6 @@ include ~/.rvm/scripts/rvm
 alias gg="git grep"
 alias v="vim"
 alias vi="vim"
+
+# Fix issue with git commit -S
+export GPG_TTY=$(tty)
