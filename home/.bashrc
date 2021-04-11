@@ -713,13 +713,15 @@ reload() {
 
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
-source "$HOME/.git-completion.bash"
+#source "$HOME/.git-completion.bash"
+source "/etc/bash_completion.d/git-prompt"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 include () {
     [[ -f "$1" ]] && source "$1"
 }
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.local/bin" # Add RVM to PATH for scripting
 
 ## Bitbake
 #export PATH=~/MineWork/bitbake/bin:~/local/bin:$PATH
@@ -732,3 +734,12 @@ alias vi="vim"
 
 # Fix issue with git commit -S
 export GPG_TTY=$(tty)
+
+convert_ipv6() {
+    local macaddr="$1"
+    printf "%02x%s" $(( 16#${macaddr:0:2} ^ 2#00000010 )) "${macaddr:2}" \
+        | sed -E -e 's/([0-9a-zA-Z]{2})*/0x\0|/g' \
+        | tr -d ':\n' \
+        | xargs -d '|' \
+        printf "fe80::%02x%02x:%02xff:fe%02x:%02x%02x"
+}
