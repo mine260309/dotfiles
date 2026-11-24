@@ -679,8 +679,7 @@ export GYP_GENERATORS=make
 # PATH of mine
 alias startproxy='~/apps/wallproxy-plus/local/startup.py'
 export ANDROID_JAVA_HOME=$JAVA_HOME
-export PATH=$PATH:/home/mine/android_tools/android-ndk/:/home/mine/android_tools/android-sdk/tools:/home/mine/bin:/extra/tools/google_appengine:/home/mine/android_tools/android-sdk/platform-tools
-export PATH=$PATH:/home/mine/apps/google_appengine
+export PATH=$PATH:/home/mine/android_tools/android-ndk/:/home/mine/android_tools/android-sdk/tools:/extra/tools/google_appengine:/home/mine/android_tools/android-sdk/platform-tools
 export PATH=$HOME/local/bin:$PATH
 export SVN_EDITOR=vim
 
@@ -721,7 +720,6 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.local/bin" # Add RVM to PATH for scripting
 
 ## Bitbake
 #export PATH=~/MineWork/bitbake/bin:~/local/bin:$PATH
@@ -743,3 +741,13 @@ convert_ipv6() {
         | xargs -d '|' \
         printf "fe80::%02x%02x:%02xff:fe%02x:%02x%02x"
 }
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/mine/.local/bin:$PATH"
+
+case ":$PATH:" in *:'/home/mine/.botmux/bin':*) ;; *) export PATH='/home/mine/.botmux/bin'":$PATH" ;; esac  # added by botmux installer
+
+# Deduplicate PATH while preserving first-seen order
+PATH="$(printf '%s' "$PATH" | awk -v RS=: -v ORS=: '!seen[$0]++ && $0 != ""' | sed 's/:$//')"
+export PATH
