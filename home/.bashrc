@@ -748,6 +748,10 @@ export PATH="/home/mine/.local/bin:$PATH"
 
 case ":$PATH:" in *:'/home/mine/.botmux/bin':*) ;; *) export PATH='/home/mine/.botmux/bin'":$PATH" ;; esac  # added by botmux installer
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Deduplicate PATH while preserving first-seen order
 PATH="$(printf '%s' "$PATH" | awk -v RS=: -v ORS=: '!seen[$0]++ && $0 != ""' | sed 's/:$//')"
 export PATH
